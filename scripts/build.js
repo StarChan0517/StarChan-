@@ -47,6 +47,10 @@ copyDir("作品整理/个人游戏DEMO", "作品整理/个人游戏DEMO", {
 });
 copyDir("作品整理/杂类海报合集", "作品整理/杂类海报合集");
 copyFile(
+  "作品整理/室内设计作品合集/室内设计作品合集.pdf",
+  "作品整理/室内设计作品合集/室内设计作品合集.pdf",
+);
+copyFile(
   "作品整理/研究生毕业设计作品/Final Exam-Xingyu Chen.pdf",
   "作品整理/研究生毕业设计作品/Final Exam-Xingyu Chen.pdf",
 );
