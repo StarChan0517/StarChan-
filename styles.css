@@ -1489,6 +1489,13 @@ video.modal-media {
   border-radius: 999px;
 }
 
+.modal-open-file--inline {
+  position: static;
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 22px;
+}
+
 .modal-note {
   width: min(620px, 100%);
   margin: min(8vh, 60px) auto;
