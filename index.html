@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STARCHAN Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-loading">
+    <div class="site-loader" id="siteLoader" aria-label="页面加载中">
+      <div class="loader-panel">
+        <div class="loader-kicker">// STARCHAN SYSTEM BOOT</div>
+        <div class="loader-readout">
+          <span>LOADING PORTFOLIO</span>
+          <b id="loaderPercent">0%</b>
+        </div>
+        <div class="loader-bar" aria-hidden="true">
+          <span id="loaderBar"></span>
+        </div>
+        <div class="loader-status">
+          <span>VISUAL CORE</span>
+          <span>AI WORKFLOW</span>
+          <span>ONLINE</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-nav" aria-label="主导航">
+      <a class="brand-pill" href="#home" aria-label="StarC 首页">
+        <span class="brand-mark">SC</span>
+        <span>StarC</span>
+      </a>
+      <nav>
+        <a href="#experience">个人经历</a>
+        <a href="#works">精选作品</a>
+        <a href="#strengths">个人优势</a>
+      </nav>
+      <a class="contact-pill" href="#contact">联系我</a>
+    </header>
+
+    <main>
+      <section class="hero-section" id="home">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="">
+          <source src="首页视频动画/成片.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-fallback"></div>
+        <div class="hero-shade"></div>
+        <div class="grain" aria-hidden="true"></div>
+        <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">
+          <span class="sound-icon" aria-hidden="true"></span>
+          <span id="soundLabel">静音</span>
+        </button>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Visual System & AI Workflow</p>
+          <h1 class="hero-title">
+            <span class="brand-title">
+              STARCHAN
+              <span class="star-cluster" aria-hidden="true"></span>
+            </span>
+            <span class="portfolio-line">
+              PORTFOLIO
+              <span class="script-sign">StarChan</span>
+            </span>
+          </h1>
+          <p class="lead">
+            <span>用视觉系统与 AI 工作流，</span>
+            <span>让品牌内容更快、更准、更有辨识度。</span>
+          </p>
+        </div>
+
+        <section class="work-ribbon" aria-label="滚动作品展示">
+          <div class="work-track">
+            <a class="ribbon-card" href="作品整理/AIGC视频/成片.mp4" data-project="aigc-video" aria-label="AIGC 视频">
+              <img src="assets/generated-covers/aigc-video-ribbon.jpg" alt="" />
+              <span><b>01 / AIGC VIDEO</b><strong>AIGC 视频</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/IP角色设定/02_班味小怪_参考定稿.png" data-project="ip-character" aria-label="IP 角色设定">
+              <img src="assets/generated-covers/ip-character-ribbon.jpg" alt="" />
+              <span><b>02 / IP DESIGN</b><strong>IP 角色设定</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/个人游戏DEMO/成片.mp4" data-project="game-demo" aria-label="个人游戏 DEMO">
+              <img src="assets/generated-covers/game-demo-ribbon.jpg" alt="" />
+              <span><b>03 / GAME DEMO</b><strong>个人游戏 DEMO</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/室内设计作品合集/室内设计作品合集.pdf" data-project="interior" aria-label="室内设计作品合集">
+              <img src="assets/generated-covers/interior-ribbon.jpg" alt="" />
+              <span><b>04 / INTERIOR</b><strong>室内设计合集</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/研究生毕业设计作品/Final Exam-Xingyu Chen.pdf" data-project="rca-final" aria-label="研究生毕业设计作品">
+              <img src="assets/generated-covers/rca-final-ribbon.jpg" alt="" />
+              <span><b>05 / RCA PROJECT</b><strong>毕业设计作品</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/杂类海报合集/微信图片_2026-06-21_162154_507.jpg" data-project="posters" aria-label="杂类海报合集">
+              <img src="assets/generated-covers/posters-ribbon.jpg" alt="" />
+              <span><b>06 / POSTERS</b><strong>杂类海报合集</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/AIGC视频/成片.mp4" data-project="aigc-video" aria-label="AIGC 视频">
+              <img src="assets/generated-covers/aigc-video-ribbon.jpg" alt="" loading="lazy" decoding="async" />
+              <span><b>01 / AIGC VIDEO</b><strong>AIGC 视频</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/IP角色设定/02_班味小怪_参考定稿.png" data-project="ip-character" aria-label="IP 角色设定">
+              <img src="assets/generated-covers/ip-character-ribbon.jpg" alt="" loading="lazy" decoding="async" />
+              <span><b>02 / IP DESIGN</b><strong>IP 角色设定</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/个人游戏DEMO/成片.mp4" data-project="game-demo" aria-label="个人游戏 DEMO">
+              <img src="assets/generated-covers/game-demo-ribbon.jpg" alt="" loading="lazy" decoding="async" />
+              <span><b>03 / GAME DEMO</b><strong>个人游戏 DEMO</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/室内设计作品合集/室内设计作品合集.pdf" data-project="interior" aria-label="室内设计作品合集">
+              <img src="assets/generated-covers/interior-ribbon.jpg" alt="" loading="lazy" decoding="async" />
+              <span><b>04 / INTERIOR</b><strong>室内设计合集</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/研究生毕业设计作品/Final Exam-Xingyu Chen.pdf" data-project="rca-final" aria-label="研究生毕业设计作品">
+              <img src="assets/generated-covers/rca-final-ribbon.jpg" alt="" loading="lazy" decoding="async" />
+              <span><b>05 / RCA PROJECT</b><strong>毕业设计作品</strong></span>
+            </a>
+            <a class="ribbon-card" href="作品整理/杂类海报合集/微信图片_2026-06-21_162154_507.jpg" data-project="posters" aria-label="杂类海报合集">
+              <img src="assets/generated-covers/posters-ribbon.jpg" alt="" loading="lazy" decoding="async" />
+              <span><b>06 / POSTERS</b><strong>杂类海报合集</strong></span>
+            </a>
+          </div>
+        </section>
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="section-head">
+          <h2>WORK EXPERIENCE <span>↘</span></h2>
+          <p>个人经历</p>
+        </div>
+
+        <div class="profile-grid">
+          <div class="profile-visual">
+            <img src="assets/profile-photo.webp" alt="StarChan 个人照片" loading="lazy" decoding="async" />
+            <span class="photo-tag">STARCHAN / Visual, Brand & AI Design</span>
+          </div>
+
+          <article class="profile-copy">
+            <p class="tiny-label">ABOUT ME</p>
+            <h3>Hi, I am ChenXingyu!</h3>
+            <p>
+              环境艺术设计与 RCA 室内设计背景，长期关注空间叙事、视觉表达和 AI 生成工作流。
+              具备从建筑空间、品牌物料到线上运营内容的跨媒介项目经验。
+            </p>
+            <div class="info-grid">
+              <span><b>角色身份</b>Spatial & AI Visual Designer</span>
+              <span><b>服务方向</b>Interior / Brand / AIGC</span>
+              <span><b>电话</b>18905388252</span>
+              <span><b>邮箱</b>chenxingyu2020@126.com</span>
+            </div>
+            <div class="building-row">
+              <span>SKILLS:</span>
+              <b>Rhino / SketchUp</b>
+              <b>Vray / Enscape / Lumion</b>
+              <b>PS / AI / ID</b>
+              <b>AI 生成工作流</b>
+            </div>
+          </article>
+        </div>
+
+        <div class="timeline">
+          <span class="timeline-label">CAREER PATH</span>
+          <article>
+            <time>2016.09 - 2020.07</time>
+            <h4>山东建筑大学</h4>
+            <p>环境艺术设计专业，掌握 Rhino、SketchUp、Vray、Enscape、Lumion 及 Adobe 系列视觉软件，并整理作品集获得 RCA Offer。</p>
+          </article>
+          <article>
+            <time>2020.05 - 2021.05</time>
+            <h4>重庆几里建筑设计公司</h4>
+            <p>完成金茂地产“清镇之心”招投标策划方案、北碚 Vini 文化产业园改造设计及施工对接等项目。</p>
+          </article>
+          <article>
+            <time>2021.09 - 2023.07</time>
+            <h4>皇家艺术学院（RCA）</h4>
+            <p>室内设计专业，开始接触 AI 大模型与 AI 生图模型，并在毕业设计中利用 AI 辅助完成项目。</p>
+          </article>
+          <article>
+            <time>2024.01 - 2024.07</time>
+            <h4>重塑计划夜校</h4>
+            <p>个人 IP 尝试项目，产出大量海报宣发作品，并掌握微信小程序制作、自媒体运营等技能。</p>
+          </article>
+          <article>
+            <time>2024.11 - 2025.07</time>
+            <h4>幸运咖红门店</h4>
+            <p>负责线上运营及海报产出，利用 AI 产出泰山打卡板与明信片文创产品，并与邮政文创达成合作。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section works-section" id="works">
+        <div class="section-head">
+          <h2>SELECTED WORKS <span>↘</span></h2>
+          <p>精选作品</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <a class="portfolio-card portfolio-card--video" href="作品整理/AIGC视频/成片.mp4" data-project="aigc-video">
+            <img src="assets/generated-covers/aigc-video-portfolio.jpg" alt="AIGC 视频封面" loading="lazy" decoding="async" />
+            <span>01 / AIGC VIDEO</span>
+            <strong>AIGC 视频</strong>
+            <p>AI 影像生成、动态叙事与成片实验。</p>
+          </a>
+
+          <a class="portfolio-card" href="作品整理/IP角色设定/02_班味小怪_参考定稿.png" data-project="ip-character">
+            <img src="assets/generated-covers/ip-character-portfolio.jpg" alt="IP 角色设定封面" loading="lazy" decoding="async" />
+            <span>02 / IP DESIGN</span>
+            <strong>IP 角色设定</strong>
+            <p>角色三视图、表情动作、分镜与周边延展。</p>
+          </a>
+
+          <a class="portfolio-card" href="作品整理/个人游戏DEMO/成片.mp4" data-project="game-demo">
+            <img src="assets/generated-covers/game-demo-portfolio.jpg" alt="个人游戏 DEMO 封面" loading="lazy" decoding="async" />
+            <span>03 / GAME DEMO</span>
+            <strong>个人游戏 DEMO</strong>
+            <p>游戏化个人网站、角色界面、加载页与功能页。</p>
+          </a>
+
+          <a class="portfolio-card portfolio-card--pdf" href="作品整理/室内设计作品合集/室内设计作品合集.pdf" data-project="interior">
+            <img src="assets/generated-covers/interior-portfolio.jpg" alt="室内设计作品合集封面" loading="lazy" decoding="async" />
+            <span>04 / INTERIOR</span>
+            <strong>室内设计作品合集</strong>
+            <p>空间设计、建模渲染、概念方案与项目表达。</p>
+          </a>
+
+          <a class="portfolio-card portfolio-card--pdf" href="作品整理/研究生毕业设计作品/Final Exam-Xingyu Chen.pdf" data-project="rca-final">
+            <img src="assets/generated-covers/rca-final-portfolio.jpg" alt="研究生毕业设计作品封面" loading="lazy" decoding="async" />
+            <span>05 / RCA PROJECT</span>
+            <strong>研究生毕业设计作品</strong>
+            <p>RCA 室内设计毕业项目与 AI 辅助设计研究。</p>
+          </a>
+
+          <a class="portfolio-card" href="作品整理/杂类海报合集/微信图片_2026-06-21_162154_507.jpg" data-project="posters">
+            <img src="assets/generated-covers/posters-portfolio.jpg" alt="杂类海报合集封面" loading="lazy" decoding="async" />
+            <span>06 / POSTERS</span>
+            <strong>杂类海报合集</strong>
+            <p>宣发海报、自媒体视觉与线上海报产出。</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section strengths-section" id="strengths">
+        <div class="section-head">
+          <h2>CORE STRENGTHS <span>↘</span></h2>
+          <p>个人优势</p>
+        </div>
+
+        <div class="strength-grid">
+          <article class="strength-card dark">
+            <small>01 / CORE</small>
+            <h3>完整项目主导能力<span>.</span></h3>
+            <p>从风格定位、视觉资产到交付规范，建立稳定可复用的项目流程。</p>
+          </article>
+          <article class="strength-card dark">
+            <small>02 / CORE</small>
+            <h3>品牌视觉体系搭建<span>.</span></h3>
+            <p>把品牌识别、视觉模板和应用场景统一成清晰系统。</p>
+          </article>
+          <article class="strength-card dark">
+            <small>03 / SYSTEM</small>
+            <h3>AI 设计提效<span>.</span></h3>
+            <p>用 AIGC 扩展创意探索、画面草图和多方案迭代效率。</p>
+          </article>
+          <article class="strength-card dark">
+            <small>04 / SYSTEM</small>
+            <h3>设计管理统筹<span>.</span></h3>
+            <p>把复杂需求拆成明确任务，让视觉方向、产出节奏和交付质量对齐。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-title">
+          <p>联系方式</p>
+          <h2>LET'S BUILD BETTER VISUAL <span>S</span>YSTEMS ↘</h2>
+          <a class="brand-pill brand-pill--large" href="#home">
+            <span class="brand-mark">SC</span>
+            <span>StarC</span>
+          </a>
+        </div>
+        <article class="contact-card">
+          <h3>CONTACT</h3>
+          <p><b>手机：</b>18905388252</p>
+          <p><b>微信号：</b>cxy280621802</p>
+          <p><b>邮箱：</b>chenxingyu2020@126.com</p>
+          <small>Visual, Brand & AI Design</small>
+          <img class="qr" src="assets/wechat-qr.jpg" alt="微信二维码" loading="lazy" decoding="async" />
+        </article>
+      </section>
+    </main>
+
+    <div class="work-modal" id="workModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="work-modal__backdrop" data-close-modal></div>
+      <section class="work-modal__panel">
+        <header class="work-modal__header">
+          <div>
+            <span id="modalKicker">// PROJECT VIEWER</span>
+            <h2 id="modalTitle">作品标题</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="关闭作品窗口">×</button>
+        </header>
+        <div class="work-modal__stage" id="modalStage"></div>
+        <footer class="work-modal__footer">
+          <button class="modal-nav" type="button" id="modalPrev">上一页</button>
+          <div class="modal-meta">
+            <span id="modalCaption">项目内容</span>
+            <b id="modalCount">1 / 1</b>
+          </div>
+          <button class="modal-nav" type="button" id="modalNext">下一页</button>
+        </footer>
+      </section>
+    </div>
+
+    <div class="media-lightbox" id="mediaLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+      <div class="media-lightbox__backdrop" data-close-lightbox></div>
+      <section class="media-lightbox__panel">
+        <header class="media-lightbox__header">
+          <div>
+            <span>// FULLSCREEN PREVIEW</span>
+            <h2 id="lightboxTitle">Media preview</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-lightbox aria-label="关闭全屏预览">×</button>
+        </header>
+        <div class="media-lightbox__stage" id="lightboxStage"></div>
+      </section>
+    </div>
+
+    <script>
+      const navLinks = [...document.querySelectorAll(".site-nav nav a")];
+      const pageAnchorLinks = [...document.querySelectorAll(".site-nav nav a, .contact-pill")];
+      const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href")));
+      const profileVisual = document.querySelector(".profile-visual");
+      const heroVideo = document.querySelector(".hero-video");
+      const soundToggle = document.getElementById("soundToggle");
+      const soundLabel = document.getElementById("soundLabel");
+      const siteLoader = document.getElementById("siteLoader");
+      const loaderPercent = document.getElementById("loaderPercent");
+      const loaderBar = document.getElementById("loaderBar");
+      const workModal = document.getElementById("workModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalKicker = document.getElementById("modalKicker");
+      const modalStage = document.getElementById("modalStage");
+      const modalCaption = document.getElementById("modalCaption");
+      const modalCount = document.getElementById("modalCount");
+      const modalPrev = document.getElementById("modalPrev");
+      const modalNext = document.getElementById("modalNext");
+      const mediaLightbox = document.getElementById("mediaLightbox");
+      const lightboxTitle = document.getElementById("lightboxTitle");
+      const lightboxStage = document.getElementById("lightboxStage");
+      let hoverAudioContext = null;
+      let lastHoverSoundAt = 0;
+      let scrollTicking = false;
+      let activeProject = null;
+      let activeSlide = 0;
+
+      const projectData = {
+        "aigc-video": {
+          title: "AIGC 视频",
+          kicker: "01 / AIGC VIDEO",
+          slides: [
+            { type: "video", src: "作品整理/AIGC视频/成片.mp4", caption: "AI 影像生成、动态叙事与成片实验" }
+          ]
+        },
+        "ip-character": {
+          title: "IP 角色设定",
+          kicker: "02 / IP DESIGN",
+          slides: [
+            { type: "image", src: "作品整理/IP角色设定/02_班味小怪_参考定稿.png", caption: "班味小怪角色参考定稿" },
+            { type: "image", src: "作品整理/IP角色设定/02_班味小怪_三视图.png", caption: "角色三视图" },
+            { type: "image", src: "作品整理/IP角色设定/02_班味小怪_8表情动作延展.png", caption: "表情动作延展" },
+            { type: "image", src: "作品整理/IP角色设定/02_班味小怪_周边产品设计.png", caption: "周边产品设计" },
+            { type: "image", src: "作品整理/IP角色设定/02_班味小怪_周边产品店.png", caption: "周边产品店" },
+            { type: "image", src: "作品整理/IP角色设定/02_班味小怪_周边产品店（零件）.png", caption: "周边产品店零件" },
+            { type: "image", src: "作品整理/IP角色设定/04_是谁端午还在简单改一下_3比4竖版重制封面.png", caption: "3:4 竖版重制封面" },
+            { type: "image", src: "作品整理/IP角色设定/05_是谁端午还在简单改一下_4比3横版重制封面.png", caption: "4:3 横版重制封面" },
+            { type: "image", src: "作品整理/IP角色设定/01_分镜1_下班前工位细化九宫格.png", caption: "分镜 01 下班前工位细化九宫格" },
+            { type: "image", src: "作品整理/IP角色设定/02_分镜2_领导消息弹出细化九宫格.png", caption: "分镜 02 领导消息弹出细化九宫格" },
+            { type: "image", src: "作品整理/IP角色设定/03_分镜3_职场翻译器任务卡雨细化九宫格.png", caption: "分镜 03 职场翻译器任务卡雨细化九宫格" },
+            { type: "image", src: "作品整理/IP角色设定/04_分镜4_邪修改稿模式细化九宫格.png", caption: "分镜 04 邪修改稿模式细化九宫格" },
+            { type: "image", src: "作品整理/IP角色设定/05_分镜5_改稿混乱蒙太奇细化九宫格.png", caption: "分镜 05 改稿混乱蒙太奇细化九宫格" },
+            { type: "image", src: "作品整理/IP角色设定/06_分镜6_深夜礼貌假笑细化九宫格.png", caption: "分镜 06 深夜礼貌假笑细化九宫格" },
+            { type: "image", src: "作品整理/IP角色设定/07_分镜7_清晨领导消息细化九宫格.png", caption: "分镜 07 清晨领导消息细化九宫格" },
+            { type: "image", src: "作品整理/IP角色设定/08_分镜8_电量归零石化收尾细化九宫格.png", caption: "分镜 08 电量归零石化收尾细化九宫格" },
+            { type: "video", src: "作品整理/IP角色设定/480p成片（字幕）.mp4", caption: "IP 角色短片成片" }
+          ]
+        },
+        "game-demo": {
+          title: "个人游戏 DEMO",
+          kicker: "03 / GAME DEMO",
+          slides: [
+            { type: "video", src: "作品整理/个人游戏DEMO/成片.mp4", caption: "游戏化个人网站 DEMO 成片" },
+            { type: "image", src: "作品整理/个人游戏DEMO/横板封面.png", caption: "横版封面" },
+            { type: "image", src: "作品整理/个人游戏DEMO/开始页.png", caption: "开始页" },
+            { type: "image", src: "作品整理/个人游戏DEMO/加载页.png", caption: "加载页" },
+            { type: "image", src: "作品整理/个人游戏DEMO/人物介绍页.png", caption: "人物介绍页" },
+            { type: "image", src: "作品整理/个人游戏DEMO/功能页.png", caption: "功能页" },
+            { type: "image", src: "作品整理/个人游戏DEMO/进入游戏页.png", caption: "进入游戏页" }
+          ]
+        },
+        interior: {
+          title: "室内设计作品合集",
+          kicker: "04 / INTERIOR",
+          slides: [
+            { type: "pdf", src: "作品整理/室内设计作品合集/室内设计作品合集.pdf", caption: "室内设计作品合集 PDF" }
+          ]
+        },
+        "rca-final": {
+          title: "研究生毕业设计作品",
+          kicker: "05 / RCA PROJECT",
+          slides: [
+            { type: "pdf", src: "作品整理/研究生毕业设计作品/Final Exam-Xingyu Chen.pdf", caption: "RCA 研究生毕业设计 PDF" }
+          ]
+        },
+        posters: {
+          title: "杂类海报合集",
+          kicker: "06 / POSTERS",
+          slides: [
+            { type: "image", src: "作品整理/杂类海报合集/1.jpg", caption: "海报作品 01" },
+            { type: "image", src: "作品整理/杂类海报合集/2.jpg", caption: "海报作品 02" },
+            { type: "image", src: "作品整理/杂类海报合集/3.jpg", caption: "海报作品 03" },
+            { type: "image", src: "作品整理/杂类海报合集/4.jpg", caption: "海报作品 04" },
+            { type: "image", src: "作品整理/杂类海报合集/5.jpg", caption: "海报作品 05" },
+            { type: "image", src: "作品整理/杂类海报合集/6.jpg", caption: "海报作品 06" },
+            { type: "image", src: "作品整理/杂类海报合集/7.jpg", caption: "海报作品 07" },
+            { type: "image", src: "作品整理/杂类海报合集/8.jpg", caption: "海报作品 08" },
+            { type: "image", src: "作品整理/杂类海报合集/9.jpg", caption: "海报作品 09" },
+            { type: "image", src: "作品整理/杂类海报合集/10.jpg", caption: "海报作品 10" },
+            { type: "image", src: "作品整理/杂类海报合集/11.jpg", caption: "海报作品 11" }
+          ]
+        }
+      };
+
+      function finishLoader() {
+        loaderPercent.textContent = "100%";
+        loaderBar.style.width = "100%";
+        window.setTimeout(() => {
+          document.body.classList.remove("is-loading");
+          siteLoader.setAttribute("aria-hidden", "true");
+        }, 220);
+      }
+
+      function runLoader() {
+        const startedAt = performance.now();
+        const duration = 1250;
+
+        function tick(now) {
+          const elapsed = now - startedAt;
+          const progress = Math.min(100, Math.round((elapsed / duration) * 100));
+          loaderPercent.textContent = `${progress}%`;
+          loaderBar.style.width = `${progress}%`;
+
+          if (progress < 100) {
+            requestAnimationFrame(tick);
+          } else {
+            finishLoader();
+          }
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      function updateSoundButton() {
+        const isOn = heroVideo && !heroVideo.muted && heroVideo.volume > 0;
+        soundToggle.classList.toggle("is-on", isOn);
+        soundToggle.setAttribute("aria-pressed", String(isOn));
+        soundLabel.textContent = isOn ? "原声" : "静音";
+      }
+
+      runLoader();
+
+      if (heroVideo && soundToggle) {
+        heroVideo.muted = true;
+        updateSoundButton();
+
+        soundToggle.addEventListener("click", async () => {
+          heroVideo.muted = !heroVideo.muted;
+          heroVideo.volume = heroVideo.muted ? 0 : 1;
+
+          try {
+            await heroVideo.play();
+          } catch (error) {
+            heroVideo.muted = true;
+            heroVideo.volume = 0;
+          }
+
+          updateSoundButton();
+        });
+
+        if ("IntersectionObserver" in window) {
+          const heroVideoObserver = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            if (entry.isIntersecting) {
+              heroVideo.play().catch(() => {});
+            } else {
+              heroVideo.pause();
+            }
+          }, { threshold: 0.12 });
+          heroVideoObserver.observe(heroVideo);
+        }
+      }
+
+      function getHoverAudioContext() {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContextClass) return null;
+        if (!hoverAudioContext) {
+          hoverAudioContext = new AudioContextClass();
+        }
+        if (hoverAudioContext.state === "suspended") {
+          hoverAudioContext.resume();
+        }
+        return hoverAudioContext;
+      }
+
+      function playHoverSound() {
+        const now = performance.now();
+        if (now - lastHoverSoundAt < 90) return;
+        lastHoverSoundAt = now;
+
+        const audioContext = getHoverAudioContext();
+        if (!audioContext) return;
+
+        const oscillator = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        const startAt = audioContext.currentTime;
+
+        oscillator.type = "sine";
+        oscillator.frequency.setValueAtTime(720, startAt);
+        oscillator.frequency.exponentialRampToValueAtTime(980, startAt + 0.055);
+        gain.gain.setValueAtTime(0.0001, startAt);
+        gain.gain.exponentialRampToValueAtTime(0.045, startAt + 0.012);
+        gain.gain.exponentialRampToValueAtTime(0.0001, startAt + 0.095);
+
+        oscillator.connect(gain);
+        gain.connect(audioContext.destination);
+        oscillator.start(startAt);
+        oscillator.stop(startAt + 0.105);
+      }
+
+      document.addEventListener("pointerover", (event) => {
+        const interactive = event.target.closest("a, button, [data-project], .portfolio-card, .ribbon-card, .strength-card");
+        if (!interactive || interactive.contains(event.relatedTarget)) return;
+        playHoverSound();
+      });
+
+      ["pointerdown", "keydown"].forEach((eventName) => {
+        document.addEventListener(eventName, () => {
+          getHoverAudioContext();
+        }, { once: true });
+      });
+
+      pageAnchorLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const target = document.querySelector(link.getAttribute("href"));
+          if (!target) return;
+
+          event.preventDefault();
+          const hash = link.getAttribute("href");
+          const focusTarget = hash === "#contact"
+            ? target.querySelector(".contact-title")
+            : target.querySelector(".section-head") || target;
+          const desiredTop = hash === "#contact"
+            ? (window.innerWidth <= 900 ? 150 : 340)
+            : (window.innerWidth <= 900 ? 120 : 118);
+          const top = focusTarget.getBoundingClientRect().top + window.scrollY - desiredTop;
+
+          window.scrollTo({ top, behavior: "smooth" });
+          history.pushState(null, "", hash);
+        });
+      });
+
+      function updateActiveNav() {
+        const activeIndex = sections.findLastIndex((section) => {
+          return section && section.getBoundingClientRect().top <= window.innerHeight * 0.35;
+        });
+
+        navLinks.forEach((link, index) => {
+          link.classList.toggle("is-active", index === Math.max(activeIndex, 0));
+        });
+        scrollTicking = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        requestAnimationFrame(updateActiveNav);
+      }, { passive: true });
+
+      updateActiveNav();
+
+      if (profileVisual) {
+        profileVisual.addEventListener("mousemove", (event) => {
+          const rect = profileVisual.getBoundingClientRect();
+          profileVisual.style.setProperty("--tag-x", `${event.clientX - rect.left}px`);
+          profileVisual.style.setProperty("--tag-y", `${event.clientY - rect.top}px`);
+        });
+      }
+
+      function renderSlide() {
+        const project = projectData[activeProject];
+        const slide = project.slides[activeSlide];
+        modalTitle.textContent = project.title;
+        modalKicker.textContent = project.kicker;
+        modalCaption.textContent = slide.caption;
+        modalCount.textContent = `${activeSlide + 1} / ${project.slides.length}`;
+        modalPrev.disabled = project.slides.length <= 1;
+        modalNext.disabled = project.slides.length <= 1;
+
+        if (slide.type === "video") {
+          modalStage.innerHTML = `
+            <div class="modal-media-wrap">
+              <button class="modal-view-full" type="button">查看大图</button>
+              <video class="modal-media" controls autoplay muted playsinline preload="metadata" src="${slide.src}"></video>
+            </div>
+          `;
+        } else if (slide.type === "pdf") {
+          modalStage.innerHTML = `
+            <iframe class="modal-media modal-pdf" src="${slide.src}" title="${slide.caption}" loading="lazy"></iframe>
+            <a class="modal-open-file" href="${slide.src}" target="_blank" rel="noreferrer">打开 PDF 原文件</a>
+          `;
+        } else {
+          modalStage.innerHTML = `
+            <div class="modal-media-wrap">
+              <button class="modal-view-full" type="button">查看大图</button>
+              <img class="modal-media" src="${slide.src}" alt="${slide.caption}" decoding="async" />
+            </div>
+          `;
+        }
+
+        const fullButton = modalStage.querySelector(".modal-view-full");
+        if (fullButton) {
+          fullButton.addEventListener("click", () => openLightbox(slide));
+        }
+      }
+
+      function openProject(projectId) {
+        activeProject = projectId;
+        activeSlide = 0;
+        renderSlide();
+        workModal.classList.add("is-open");
+        workModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-active");
+      }
+
+      function closeProject() {
+        closeLightbox();
+        workModal.classList.remove("is-open");
+        workModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-active");
+        modalStage.innerHTML = "";
+      }
+
+      function openLightbox(slide) {
+        lightboxTitle.textContent = slide.caption;
+        if (slide.type === "video") {
+          lightboxStage.innerHTML = `<video class="lightbox-media" controls autoplay playsinline preload="metadata" src="${slide.src}"></video>`;
+        } else {
+          lightboxStage.innerHTML = `<img class="lightbox-media" src="${slide.src}" alt="${slide.caption}" decoding="async" />`;
+        }
+        mediaLightbox.classList.add("is-open");
+        mediaLightbox.setAttribute("aria-hidden", "false");
+      }
+
+      function closeLightbox() {
+        mediaLightbox.classList.remove("is-open");
+        mediaLightbox.setAttribute("aria-hidden", "true");
+        lightboxStage.innerHTML = "";
+      }
+
+      function shiftSlide(step) {
+        const slides = projectData[activeProject]?.slides || [];
+        if (!slides.length) return;
+        activeSlide = (activeSlide + step + slides.length) % slides.length;
+        renderSlide();
+      }
+
+      document.querySelectorAll("[data-project]").forEach((card) => {
+        card.addEventListener("click", (event) => {
+          event.preventDefault();
+          openProject(card.dataset.project);
+        });
+      });
+
+      document.querySelectorAll("[data-close-modal]").forEach((control) => {
+        control.addEventListener("click", closeProject);
+      });
+
+      document.querySelectorAll("[data-close-lightbox]").forEach((control) => {
+        control.addEventListener("click", closeLightbox);
+      });
+
+      modalPrev.addEventListener("click", () => shiftSlide(-1));
+      modalNext.addEventListener("click", () => shiftSlide(1));
+
+      window.addEventListener("keydown", (event) => {
+        if (!workModal.classList.contains("is-open")) return;
+        if (event.key === "Escape") {
+          if (mediaLightbox.classList.contains("is-open")) {
+            closeLightbox();
+          } else {
+            closeProject();
+          }
+        }
+        if (mediaLightbox.classList.contains("is-open")) return;
+        if (event.key === "ArrowLeft") shiftSlide(-1);
+        if (event.key === "ArrowRight") shiftSlide(1);
+      });
+    </script>
+  </body>
+</html>
